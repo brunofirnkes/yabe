@@ -5,7 +5,7 @@ import { ACCESS_TOKEN, REFRESH_TOKEN} from "../constants"
 
 import { useState, useEffect } from "react"
 
-function ProtectedRoute({childre}){
+function ProtectedRoute({children}){
     const [isAuthorized, setIsAuthorized] = useState(null)
 
     useEffect(() => {

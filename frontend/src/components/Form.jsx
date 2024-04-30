@@ -16,16 +16,15 @@ function Form({route, method}){
     const handleSubmit = async (e) => {
         setLoading(true)
         e.preventDefault()
-
         try {
             const res = await api.post(route, {username, password})
-            if (!method === "login"){
+            if (method === "login"){
                 localStorage.setItem(ACCESS_TOKEN, res.data.access)
                 localStorage.setItem(REFRESH_TOKEN, res.data.refresh)
 
                 navigate("/")
             } else {
-                navigate("*")
+                navigate("/login")
             }
         } catch (error){
             alert(error)
