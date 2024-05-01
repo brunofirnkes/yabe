@@ -1,5 +1,13 @@
+import Navbar from "../components/Navbar"
+import ProductListSummary from "../components/ProductListSummary"
+
 function Home(){
-    return <div>Home</div>
+    return (
+        <>
+            <Navbar />
+            <ProductListSummary />
+        </>
+    )
 }
 
 export default Home
